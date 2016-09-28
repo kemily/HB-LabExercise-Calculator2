@@ -36,7 +36,14 @@ while True:
 	elif token[0] == 'cube':
 		num1 = int(token[1]) 
 		print cube(num1)
-
-
-
+	elif token[0] == 'power':
+		num1 = int(token[1]) 
+		num2 = int(token[2])
+		print power(num1, num2)
+	elif token[0] == 'mod':
+		num1 = int(token[1]) 
+		num2 = int(token[2])
+		print mod(num1, num2)
+	else:
+		print "We don't know what are you talking about, girl!!!!"
 	
