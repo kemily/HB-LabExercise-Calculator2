@@ -10,7 +10,7 @@ from arithmetic import *
 
 # Your code goes here
 while True:
-	input_string = raw_input("<<<")
+	input_string = raw_input("<<< ")
 	token = input_string.split(" ")
 	if token[0] == 'q':
 		break
@@ -22,4 +22,12 @@ while True:
 		num1 = int(token[1]) 
 		num2 = int(token[2])
 		print subtract(num1, num2)
-		
+	elif token[0] == '*':
+		num1 = int(token[1]) 
+		num2 = int(token[2])
+		print multiply(num1, num2)
+	elif token[0] == '/':
+		num1 = int(token[1]) 
+		num2 = int(token[2])
+		print divide(num1, num2)
+	
