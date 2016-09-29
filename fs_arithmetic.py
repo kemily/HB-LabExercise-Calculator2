@@ -2,12 +2,12 @@
 #     return num1 + num2
 
 
-def subtract(num1, num2):
-    return num1 - num2
+# def subtract(num1, num2):
+#     return num1 - num2
 
 
-def multiply(num1, num2):
-    return num1 * num2
+# def multiply(num1, num2):
+#     return num1 * num2
 
 
 def divide(num1, num2):
@@ -57,13 +57,20 @@ def subtract(*arg):
 
 print subtract(20, 4, 6, 8)
 
+def multiply(*arg):
+    """This function multiplies all the given parameters, number of which is inknown"""
+    mult = 1
+    for i in arg:
+        mult = mult * i
+    return mult
 
+print multiply(1, 2, 3, 4, 5)
 
+def divide(*arg):
+    """This function divides all the elements by the first element in the given range"""
+    div = float(arg[0])
+    for i in arg[1:]:
+        div = div / i
+    return div
 
-
-
-
-
-
-
-
+print divide(120, 4, 5, 3)
