@@ -1,41 +1,3 @@
-# def add(num1, num2):
-#     return num1 + num2
-
-
-# def subtract(num1, num2):
-#     return num1 - num2
-
-
-# def multiply(num1, num2):
-#     return num1 * num2
-
-
-def divide(num1, num2):
-    # Need to turn at least argument to float for division to
-    # not be integer division
-    return float(num1) / float(num2)
-
-
-def square(num1):
-    # Needs only one argument
-    return num1 * num1
-
-
-def cube(num1):
-    # Needs only one argument
-    return num1 * num1 * num1
-
-
-def power(num1, num2):
-    return num1 ** num2  # ** = exponent operator
-
-
-def mod(num1, num2):
-    return num1 % num2
-
-
-
-
 def new_add(*arg):
     """This function takes an unknown number of arguments and return sum of them"""
     summ = 0
@@ -74,3 +36,33 @@ def divide(*arg):
     return div
 
 print divide(120, 4, 5, 3)
+
+
+
+def square(num1):
+    # Needs only one argument
+    return num1 * num1
+
+
+def cube(num1):
+    # Needs only one argument
+    return num1 * num1 * num1
+
+
+# def power(num1, num2):
+#     return num1 ** num2  # ** = exponent operator
+
+def power(*arg):
+    """this function returns resuilt of exponention of the first number by the rest of the numbers"""
+    #first number will be the base for the exponention
+    power_total = arg[0]
+    #the rest of the numbers are the exponents of the number
+    for i in arg[1:]:
+        power_total = power_total ** i
+    return power_total
+
+print power(2, 2, 3, 4)
+
+
+def mod(num1, num2):
+    return num1 % num2
