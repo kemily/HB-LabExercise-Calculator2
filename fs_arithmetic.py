@@ -39,15 +39,32 @@ print divide(120, 4, 5, 3)
 
 
 
-def square(num1):
+def square(*arg):
+    """This function check if an user inputs one argument, if so, it returns the
+       value of the squared number, if not it will give a message
+    """
     # Needs only one argument
-    return num1 * num1
+    if len(arg) == 1:
+        return arg[0] * arg[0]
+    else:
+        return "Input only one number, to get it squared!"
+
+print square(2)
+print square(1, 3, 5, 6)
 
 
-def cube(num1):
+def cube(*arg):
+    """This function check if an user inputs one argument, if so, it returns the
+       value of the cubed number, if not it will give a message
+    """
     # Needs only one argument
-    return num1 * num1 * num1
+    if len(arg) == 1:
+        return arg[0] * arg[0] * arg[0]
+    else:
+        return "Input only one number, to get it squared!"
 
+print cube(2)
+print cube(1, 3, 5, 6)
 
 # def power(num1, num2):
 #     return num1 ** num2  # ** = exponent operator
